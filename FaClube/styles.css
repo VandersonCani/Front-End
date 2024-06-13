@@ -17,9 +17,14 @@
     box-shadow: 5px 10px 18px #888888;
     overflow: hidden;
 }
-#topconteudo{
+
+#topconteudo {
+    margin-left: 15px;
+    text-align: center;
+    padding: 6px;
     font-size: 35px;
     width: 98%;
+    color: aliceblue;
     border-radius: 8px;
     background-color: rgba(3, 3, 3, 0.726);
 }
@@ -31,9 +36,11 @@ p.titulo {
     font-weight: bold;
     margin-bottom: 7px;
 }
-#intro{
+
+#intro {
     font-size: 16px;
 }
+
 p {
     font-size: 10px;
     font-family: 'Times New Roman';
@@ -68,6 +75,19 @@ h1 {
     color: rgba(34, 33, 33, 0.877);
 }
 
+.faleconosco {
+    margin-top: 25px;
+}
+
+#nome,
+#fone,
+#email {}
+
+input {
+    margin-left: 15px;
+    text-align: center;
+}
+
 a:link {
     font-size: 25px;
     color: aliceblue;
@@ -86,4 +106,113 @@ a:visited {
     width: 98%;
     height: 45%;
     border-radius: 10px;
+}
+
+/*------------ Tabela ------------------*/
+.tabelaProdutos {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.tituloTabela {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+tr,
+td,
+th {
+    border: 1px solid #868686;
+    border-radius: 3px;
+    padding: 5px;
+
+}
+
+tr,
+td {
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #838383;
+}
+
+tr:nth-child(odd) {
+    background-color: #abacad;
+}
+
+/*------------- Inscreva-se -----------*/
+.input .titulo {
+    position: relative;
+    margin: 8px;
+}
+
+.input-single {
+    position: relative;
+    margin: 30px;
+}
+
+.input-single label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.2s;
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+    outline: 0;
+    border-style: none;
+    border-bottom-style: solid;
+    border-right-style: solid;
+}
+
+form .input-single .input:focus~label,
+form .input-single .input:valid~label {
+    transform: translateY(-24px);
+    font-size: 10px;
+    color: #2D5966;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(66, 173, 66);
+    color: white;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+li {
+    padding: 2px;
+}
+
+form h3 {
+    padding-top: 20px;
+}
+
+#titulo_submissao-box {
+    width: 100%;
+    margin: 10px auto;
+}
+
+h3 {
+    text-align: left;
+    color: rgba(34, 33, 33, 0.877);
+    font-size: 20px;
 }
