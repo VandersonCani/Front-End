@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Coldigo Geladeiras</title>
 	<link rel="stylesheet" type="text/css" href="../../css/site.css">
+	<script src="../../js/site.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 	<section>
 		<h2>Fale Conosco!</h2>
 		<p>Ficou alguma dúvida? Prenhca este formulário e entraremos em contato!</p>
-		<form name="frmfaleconosco" method="post" action="#">
+		<form name="frmfaleconosco" method="get" action="#" onsubmit="return validaFaleConosco()">
 			<fieldset class="faleConosco">
 				<legend> Dados Pessoais: </legend>
 				<label for="nome">Nome: </label>
