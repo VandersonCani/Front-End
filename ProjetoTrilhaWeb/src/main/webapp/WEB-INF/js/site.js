@@ -45,6 +45,5 @@ function verificaMotivo(motivo) {
         if(elemento.firstChild)
             elemento.removeChild(elemento.firstChild);
     
-
     }
 }
