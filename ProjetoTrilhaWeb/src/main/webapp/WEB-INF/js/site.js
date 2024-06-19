@@ -28,7 +28,7 @@ function verificaMotivo(motivo) {
         select.appendChild(option);
 
         var option = document.createElement("option");
-        option.setAttribute("value", "FR");
+        option.setAttribute("value", "");
         var texto = document.createTextNode("Freezer");
         option.appendChild(texto);
         select.appendChild(option);
@@ -37,10 +37,15 @@ function verificaMotivo(motivo) {
         var texto = document.createTextNode("Geladeira");
 
         option.appendChild(texto);
-
         select.appendChild(option);
-
         elemento.appendChild(select);
+
+        if (document.frmfaleconosco.option.value == ""){
+
+            alert("Selecione um Produto");
+            document.frmfaleconosco.option.focus();
+        }
+
     }else{
         if(elemento.firstChild)
             elemento.removeChild(elemento.firstChild);
