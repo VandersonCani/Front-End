@@ -1,11 +1,18 @@
 function validaFaleConosco() {
-    if (document.frmfaleconosco.txtnome.value == "") {
-        alert("Preencha o campo Nome.");
+    var nome = document.frmfaleconosco.txtnome.value;
+    var expRegNome = new RegExp("^[A-zÀ-ü]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
+
+    if(!expRegNome.test(nome)){
+        alert("Preencha o campo Nome Corretamente.");
         document.frmfaleconosco.txtnome.focus();
         return false;
     }
-    if (document.frmfaleconosco.txtfone.value == "") {
-        alert("Preencha o campo Telefone.");
+    
+    var fone = document.frmfaleconosco.txtfone.value;
+    var expRegFone = new RegExp("[(]?\d{2}[)]?[ ]?\d{4,5}[-]?\d{4}");
+
+    if (!expRegFone.test(fone)) {
+        alert("Preencha o campo Telefone corretamente.");
         document.frmfaleconosco.txtfone.focus();
         return false;
     }
@@ -14,6 +21,22 @@ function validaFaleConosco() {
         document.frmfaleconosco.txtemail.focus();
         return false;
     }
+    if (document.frmfaleconosco.selmotivo.value == "") {
+        alert("Selecione um Motivo");
+        document.frmfaleconosco.selmotivo.focus();
+        return false;
+    }
+    if (document.frmfaleconosco.txacomentario.value == "") {
+        alert("Escreva Sua Dúvida");
+        document.frmfaleconosco.txacomentario.focus();
+        return false;
+    }
+    if (document.frmfaleconosco.selproduto.value == "") {
+        alert("Selecione um Produto");
+        document.frmfaleconosco.selproduto.focus();
+        return false;
+    }
+
     return true;
 }
 function verificaMotivo(motivo) {
@@ -28,7 +51,7 @@ function verificaMotivo(motivo) {
         select.appendChild(option);
 
         var option = document.createElement("option");
-        option.setAttribute("value", "");
+        option.setAttribute("value", "FR");
         var texto = document.createTextNode("Freezer");
         option.appendChild(texto);
         select.appendChild(option);
@@ -40,15 +63,8 @@ function verificaMotivo(motivo) {
         select.appendChild(option);
         elemento.appendChild(select);
 
-        if (document.frmfaleconosco.option.value == ""){
-
-            alert("Selecione um Produto");
-            document.frmfaleconosco.option.focus();
-        }
-
-    }else{
-        if(elemento.firstChild)
+    } else {
+        if (elemento.firstChild)
             elemento.removeChild(elemento.firstChild);
-    
     }
 }
