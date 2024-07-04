@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:/Users/vanderson/Desktop/ProjetoTrilhaWeb/FaClube/inscreva-se.html",
+            "url": "C:/Users/vanderson_alex/Desktop/WorkSpaceTrilhaWEB/FaClube/inscreva-se.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
