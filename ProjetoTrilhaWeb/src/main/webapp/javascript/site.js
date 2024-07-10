@@ -1,5 +1,6 @@
-function validaFaleConosco() {
-    var nome = document.frmfaleconosco.txtnome.value;
+function teste() {
+	
+  	var nome = document.frmfaleconosco.txtnome.value;
     var expRegNome = new RegExp("^[A-zÀ-ü]{3,}([ ]{1}[A-zÀ-ü]{2,})+$");
 
     if(!expRegNome.test(nome)){
@@ -68,3 +69,9 @@ function verificaMotivo(motivo) {
             elemento.removeChild(elemento.firstChild);
     }
 }
+
+ jQuery(document).ready(function($){
+	$("header").load("/ProjetoTrilhaWeb/pages/site/general/cabecalho.html");
+	$("nav").load("/ProjetoTrilhaWeb/pages/site/general/menu.html");
+	$("footer").load("/ProjetoTrilhaWeb/pages/site/general/rodape.html");
+});
